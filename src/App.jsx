@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // Context
 import GeneralContext from "./Context/GeneralContext";
 // Components
+import { NavBar, Footer } from "./Components";
+// Pages
 import { Home, Error404 } from "./pages";
 
 const App = () => {
@@ -12,10 +14,14 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<Error404 />} />
-      </Routes>
+      <div className="app-container">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 };
