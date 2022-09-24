@@ -44,6 +44,19 @@ a:active {
 .home-page-container {
   grid-area: main-content;
 }
+.home-page-container .home-content-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 3rem 0 0 0;
+}
+.home-page-container .home-content-container h1 {
+  font-weight: 100;
+  font-size: 36px;
+}
+.home-page-container .home-content-container h1 span {
+  font-weight: 700;
+}
 
 .footer-container {
   grid-area: footer;
