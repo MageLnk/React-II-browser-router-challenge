@@ -1,5 +1,6 @@
 import { IconContext } from "react-icons";
-import { RiCake2Fill } from "react-icons/ri";
+// Components
+import Logo from "./Logo";
 const NavBar = () => {
   return (
     <div className="navbar-container">
@@ -8,9 +9,7 @@ const NavBar = () => {
         <span>Dos</span>
       </div>
       <IconContext.Provider value={{ className: "NavBar-cake-icon" }}>
-        <div className="navbar-logo-container">
-          Happy Cake <RiCake2Fill />
-        </div>
+        <Logo />
       </IconContext.Provider>
     </div>
   );
