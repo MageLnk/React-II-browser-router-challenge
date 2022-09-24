@@ -58,6 +58,16 @@ a:active {
   font-weight: 700;
 }
 
+.contact-page-container {
+  grid-area: main-content;
+}
+.contact-page-container .contact-content-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 3rem 0 0 0;
+}
+
 .footer-container {
   grid-area: footer;
   background-color: #dc3546;
