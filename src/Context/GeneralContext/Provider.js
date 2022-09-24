@@ -1,22 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // Context
 import GeneralContext from ".";
 // Utilities
-//import apiCall from "../../api/apiCall";
+import apiCall from "../../api/apiCall";
 
 const GeneralContextProvider = ({ children }) => {
-  const [test, setTest] = useState(true);
+  const [data, setData] = useState("");
 
-  //const exampleUseApiCall = async (userId) => {
-  //  try {
-  //    const data = await apiCall({ url: `http://insertApiAddress` });
-  //    // Insert setData(data)
-  //  } catch (e) {
-  //    alert("Un error ha ocurrido. Por favor actualice la página");
-  //  }
-  //};
+  const bringDataOnLoad = async (searchValue) => {
+    try {
+      const data = await apiCall({
+        url: `https://api.wirestock.io/search?q=${`${searchValue}`}&page=1&per_page=5&types[]=photo&orientation=landscape&mature=0`,
+      });
+      setData(data);
+    } catch (e) {
+      alert("Un error ha ocurrido. Por favor actualice la página");
+    }
+  };
 
-  return <GeneralContext.Provider value={{ test, setTest }}>{children}</GeneralContext.Provider>;
+  useEffect(() => {
+    bringDataOnLoad("cakes");
+  }, []);
+
+  return <GeneralContext.Provider value={{ data }}>{children}</GeneralContext.Provider>;
 };
 
 export default GeneralContextProvider;

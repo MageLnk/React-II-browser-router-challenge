@@ -60,6 +60,13 @@ a:active {
 .home-page-container .home-content-container h1 span {
   font-weight: 700;
 }
+.home-page-container .home-content-container .home-content-subtitle {
+  font-size: 16px;
+}
+.home-content-carousel-container {
+  margin: 3rem 0 3rem 0;
+  width: 50%;
+}
 
 .contact-page-container {
   grid-area: main-content;
