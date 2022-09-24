@@ -1,3 +1,4 @@
+@import "~antd/dist/antd.css";
 body {
   margin: 0;
   padding: 0;
@@ -30,6 +31,8 @@ a:active {
 }
 .navbar-container .navbar-options-container span .NavBar-icon-options {
   color: black;
+  align-items: center;
+  font-size: 18px;
 }
 .navbar-container .NavBar-cake-icon {
   color: black;
@@ -77,11 +80,10 @@ a:active {
   width: 100%;
 }
 .contact-page-container .contact-content-container .contact-content-form h3 {
-  margin: 0;
+  margin: 1rem;
 }
 .contact-page-container .contact-content-container .contact-content-form .contact-email-input {
   width: 60%;
-  padding: 0.2rem;
   border-radius: 6px;
 }
 .contact-page-container
@@ -89,8 +91,18 @@ a:active {
   .contact-content-form
   .contact-description-input {
   width: 60%;
-  padding: 3rem 0.1rem 3rem 0.1rem;
   border-radius: 6px;
+}
+.contact-page-container .contact-content-container .contact-content-form button {
+  margin: 1rem 0 0 0;
+  background-color: #dc3546;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+}
+.contact-page-container .contact-content-container .contact-content-form button:hover {
+  background-color: #a01725;
 }
 
 .footer-container {
